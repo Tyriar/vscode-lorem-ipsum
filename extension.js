@@ -3,8 +3,8 @@ var loremIpsum = require('lorem-ipsum');
 
 function activate(context) {
   var commands = [
-    vscode.commands.registerCommand('lipsum.line', generateLine),
-    vscode.commands.registerCommand('lipsum.paragraph', generateParagraph)
+    vscode.commands.registerCommand('lorem-ipsum.line', generateLine),
+    vscode.commands.registerCommand('lorem-ipsum.paragraph', generateParagraph)
   ];
   
   commands.forEach(function (command) {
