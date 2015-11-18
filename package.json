@@ -45,5 +45,6 @@
   },
   "dependencies": {
     "lorem-ipsum": "^1.0.3"
-  }
+  },
+  "icon": "images/icon.png"
 }
