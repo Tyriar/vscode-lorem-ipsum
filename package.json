@@ -1,0 +1,49 @@
+{
+  "name": "lorem-ipsum",
+  "displayName": "Lorem ipsum",
+  "description": "Generates and inserts lorem ipsum text",
+  "version": "0.1.0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tyriar/vscode-lorem-ipsum/issues"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "homepage": "https://github.com/Tyriar/vscode-lorem-ipsum",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tyriar/vscode-lorem-ipsum"
+  },
+  "publisher": "Tyriar",
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:lorem-ipsum.line",
+    "onCommand:lorem-ipsum.paragraph"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "lorem-ipsum.line",
+        "title": "Insert a line of lorem ipsum text"
+      },
+      {
+        "command": "lorem-ipsum.paragraph",
+        "title": "Insert a paragraph of lorem ipsum text"
+      }
+    ]
+  },
+  "devDependencies": {
+    "vscode": "0.10.x",
+    "mocha": "~2.3.3"
+  },
+  "dependencies": {
+    "lorem-ipsum": "^1.0.3"
+  }
+}
