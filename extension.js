@@ -6,14 +6,14 @@ function activate(context) {
     vscode.commands.registerCommand('lorem-ipsum.line', generateLine),
     vscode.commands.registerCommand('lorem-ipsum.paragraph', generateParagraph)
   ];
-  
+
   commands.forEach(function (command) {
     context.subscriptions.push(command);
   });
 }
 
 function insertText(text) {
-  var editor = vscode.window.activeTextEditor; 
+  var editor = vscode.window.activeTextEditor;
   editor.edit(function (editBuilder) {
     editBuilder.delete(editor.selection);
   }).then(function () {
@@ -26,14 +26,14 @@ function insertText(text) {
 function generateLine() {
   insertText(loremIpsum({
     count: 1,
-    units: 'sentences' 
+    units: 'sentences'
   }));
 }
 
 function generateParagraph() {
   insertText(loremIpsum({
     count: 1,
-    units: 'paragraphs' 
+    units: 'paragraphs'
   }));
 }
 
