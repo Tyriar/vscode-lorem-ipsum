@@ -44,7 +44,7 @@ async function generateMultipleParagraphs() {
     items.push(i.toString());
   }
 
-  const count = await vscode.window.showQuickPick(items, { placeHolder: 'How many paragrams?' });
+  const count = await vscode.window.showQuickPick(items, { placeHolder: 'How many paragraphs?' });
   if (!count) {
     return;
   }
