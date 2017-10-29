@@ -4,7 +4,8 @@ var loremIpsum = require('lorem-ipsum');
 function activate(context) {
   var commands = [
     vscode.commands.registerCommand('lorem-ipsum.line', generateLine),
-    vscode.commands.registerCommand('lorem-ipsum.paragraph', generateParagraph)
+    vscode.commands.registerCommand('lorem-ipsum.paragraph', generateParagraph),
+    vscode.commands.registerCommand('lorem-ipsum.paragraph.multiple', generateMultipleParagraphs)
   ];
 
   commands.forEach(function (command) {
@@ -33,6 +34,23 @@ function generateLine() {
 function generateParagraph() {
   insertText(loremIpsum({
     count: 1,
+    units: 'paragraphs'
+  }));
+}
+
+async function generateMultipleParagraphs() {
+  const items = [];
+  for (let i = 2; i <= 10; i++) {
+    items.push(i.toString());
+  }
+
+  const count = await vscode.window.showQuickPick(items, { placeHolder: 'How many paragrams?' });
+  if (!count) {
+    return;
+  }
+
+  insertText(loremIpsum({
+    count: Number.parseInt(count),
     units: 'paragraphs'
   }));
 }
