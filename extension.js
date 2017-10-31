@@ -5,7 +5,7 @@ function activate(context) {
   var commands = [
     vscode.commands.registerCommand('lorem-ipsum.line', generateLine),
     vscode.commands.registerCommand('lorem-ipsum.paragraph', generateParagraph),
-    vscode.commands.registerCommand('lorem-ipsum.paragraph.multiple', generateMultipleParagraphs)
+    vscode.commands.registerCommand('lorem-ipsum.multipleParagraphs', generateMultipleParagraphs)
   ];
 
   commands.forEach(function (command) {
