@@ -24,7 +24,8 @@
   ],
   "activationEvents": [
     "onCommand:lorem-ipsum.line",
-    "onCommand:lorem-ipsum.paragraph"
+    "onCommand:lorem-ipsum.paragraph",
+    "onCommand:lorem-ipsum.multipleParagraphs"
   ],
   "main": "./extension",
   "contributes": {
@@ -36,6 +37,10 @@
       {
         "command": "lorem-ipsum.paragraph",
         "title": "Insert a paragraph of lorem ipsum text"
+      },
+      {
+        "command": "lorem-ipsum.multipleParagraphs",
+        "title": "Insert multiple paragraphs of lorem ipsum text"
       }
     ]
   },
