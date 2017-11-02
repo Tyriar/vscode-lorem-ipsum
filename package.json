@@ -32,15 +32,15 @@
     "commands": [
       {
         "command": "lorem-ipsum.line",
-        "title": "Insert a line of lorem ipsum text"
+        "title": "Lorem Ipsum: Insert a line"
       },
       {
         "command": "lorem-ipsum.paragraph",
-        "title": "Insert a paragraph of lorem ipsum text"
+        "title": "Lorem Ipsum: Insert a paragraph"
       },
       {
         "command": "lorem-ipsum.multipleParagraphs",
-        "title": "Insert multiple paragraphs of lorem ipsum text"
+        "title": "Lorem Ipsum: Insert multiple paragraphs"
       }
     ]
   },
