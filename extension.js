@@ -15,7 +15,14 @@ function activate(context) {
 
 function insertText(lorem) {
   var editor = vscode.window.activeTextEditor;
-  editor.edit(edit => editor.selections.forEach(v => edit.replace(v, loremIpsum(lorem))));
+  editor.edit(
+    edit => editor.selections.forEach(
+      selection => {
+        edit.delete(selection);
+        edit.insert(selection.start, loremIpsum(lorem));
+      }
+    )
+  );
 }
 
 function generateLine() {
