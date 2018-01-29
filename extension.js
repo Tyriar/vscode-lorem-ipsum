@@ -13,29 +13,30 @@ function activate(context) {
   });
 }
 
-function insertText(text) {
+function insertText(lorem) {
   var editor = vscode.window.activeTextEditor;
-  editor.edit(function (editBuilder) {
-    editBuilder.delete(editor.selection);
-  }).then(function () {
-    editor.edit(function (editBuilder) {
-      editBuilder.insert(editor.selection.start, text);
-    });
-  });
+  editor.edit(
+    edit => editor.selections.forEach(
+      selection => {
+        edit.delete(selection);
+        edit.insert(selection.start, loremIpsum(lorem));
+      }
+    )
+  );
 }
 
 function generateLine() {
-  insertText(loremIpsum({
+  insertText({
     count: 1,
     units: 'sentences'
-  }));
+  });
 }
 
 function generateParagraph() {
-  insertText(loremIpsum({
+  insertText({
     count: 1,
     units: 'paragraphs'
-  }));
+  });
 }
 
 async function generateMultipleParagraphs() {
@@ -49,10 +50,10 @@ async function generateMultipleParagraphs() {
     return;
   }
 
-  insertText(loremIpsum({
+  insertText({
     count: Number.parseInt(count),
     units: 'paragraphs'
-  }));
+  });
 }
 
 exports.activate = activate;
