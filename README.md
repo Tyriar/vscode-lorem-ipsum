@@ -1,17 +1,23 @@
-# Functionality
+A tiny VS Code extension made up of a few commands that generate and insert lorem ipsum text into a text file.
 
-Generates and inserts lorem ipsum text into Visual Studio Code.
-
-# Install
-
-1. Open VS Code
-2. Press F1
-3. Type "install"
-4. Select "Extensions: Install Extension".
-5. Select Lorem ipsum from the list
-
-# Usage
-
-Press F1 type lorem ipsum and select to insert either a line or paragraph.
+To use the extension, open the command palette (<kbd>F1</kbd> or <kbd>cmd/ctrl+shift+p</kbd>, type "lorem ipsum" and select to insert either a line or paragraph.
 
 ![Usage animation](images/usage-animation.gif)
+
+## Customization
+
+The following commands are added:
+
+- `lorem-ipsum.line`
+- `lorem-ipsum.paragraph`
+- `lorem-ipsum.multipleParagraphs`
+
+By default they don't have keybindings, but [you can add a custom keybinding](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization). For example:
+
+```json
+{
+  "key": "ctrl+shift+l",
+  "command": "lorem-ipsum.paragraph",
+  "when": "editorTextFocus"
+}
+```

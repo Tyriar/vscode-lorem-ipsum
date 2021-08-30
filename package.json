@@ -2,7 +2,7 @@
   "name": "lorem-ipsum",
   "displayName": "Lorem ipsum",
   "description": "Generates and inserts lorem ipsum text",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Tyriar/vscode-lorem-ipsum/issues"
