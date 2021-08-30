@@ -2,7 +2,7 @@
 
 ## 1.3.0
 - Added a new dark theme-friendly icon ([#2](https://github.com/Tyriar/vscode-lorem-ipsum/issues/2)) via [@Tyriar](https://github.com/Tyriar)
-- Polished readme, included example on how to add a keybinding via [@Tyriar](https://github.com/Tyriar)
+- Polished readme, new gif, example on how to add a keybinding via [@Tyriar](https://github.com/Tyriar)
 
 ## 1.2.0
 - Added multi-cursor support

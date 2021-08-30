@@ -2,7 +2,7 @@ A tiny VS Code extension made up of a few commands that generate and insert lore
 
 To use the extension, open the command palette (<kbd>F1</kbd> or <kbd>cmd/ctrl+shift+p</kbd>, type "lorem ipsum" and select to insert either a line or paragraph.
 
-![Usage animation](images/usage-animation.gif)
+![](images/usage-animation.gif)
 
 ## Customization
 
