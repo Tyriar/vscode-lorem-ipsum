@@ -21,3 +21,7 @@ By default they don't have keybindings, but [you can add a custom keybinding](ht
   "when": "editorTextFocus"
 }
 ```
+
+## Credits
+
+- The core functionality is provided by the [lorem-ipsum npm package](https://www.npmjs.com/package/lorem-ipsum)
