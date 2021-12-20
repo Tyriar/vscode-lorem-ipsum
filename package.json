@@ -8,7 +8,10 @@
     "url": "https://github.com/Tyriar/vscode-lorem-ipsum/issues"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "compile-web": "webpack",
+    "watch-web": "webpack --watch",
+    "package-web": "webpack --mode production --devtool hidden-source-map"
   },
   "homepage": "https://github.com/Tyriar/vscode-lorem-ipsum",
   "repository": {
@@ -28,6 +31,7 @@
     "onCommand:lorem-ipsum.multipleParagraphs"
   ],
   "main": "./extension",
+  "browser": "./dist/web/extension.js",
   "contributes": {
     "commands": [
       {
@@ -45,8 +49,11 @@
     ]
   },
   "devDependencies": {
+    "@types/webpack-env": "^1.16.3",
+    "mocha": "~2.3.3",
     "vscode": "0.10.x",
-    "mocha": "~2.3.3"
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   },
   "dependencies": {
     "lorem-ipsum": "^1.0.3"
