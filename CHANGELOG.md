@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.3.1
+- vscode.dev and github.dev support via [@Tyriar](https://github.com/Tyriar)
+
 ## 1.3.0
 - Added a new dark theme-friendly icon ([#2](https://github.com/Tyriar/vscode-lorem-ipsum/issues/2)) via [@Tyriar](https://github.com/Tyriar)
 - Polished readme, new gif, example on how to add a keybinding via [@Tyriar](https://github.com/Tyriar)
